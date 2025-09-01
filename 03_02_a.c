@@ -23,7 +23,6 @@ void push(struct Stack* s, int x) {
     }
     s->arr[++(s->top)] = x;
 }
-
 int pop(struct Stack* s) {
     if (isEmpty(s)) {
         printf("Stack underflow!\n");
@@ -31,7 +30,6 @@ int pop(struct Stack* s) {
     }
     return s->arr[(s->top)--];
 }
-
 int peek(struct Stack* s) {
     if (isEmpty(s)) {
         printf("Stack is empty!\n");
@@ -39,16 +37,13 @@ int peek(struct Stack* s) {
     }
     return s->arr[s->top];
 }
-
 struct Queue {
     struct Stack s1, s2;
 };
-
 void initQueue(struct Queue* q) {
     initStack(&(q->s1));
     initStack(&(q->s2));
 }
-
 void enqueue(struct Queue* q, int x) {
 
     while (!isEmpty(&(q->s1))) {
@@ -59,10 +54,8 @@ void enqueue(struct Queue* q, int x) {
     while (!isEmpty(&(q->s2))) {
         push(&(q->s1), pop(&(q->s2)));
     }
-
     printf("Enqueued %d\n", x);
 }
-
 void dequeue(struct Queue* q) {
     if (isEmpty(&(q->s1))) {
         printf("Queue is empty!\n");
