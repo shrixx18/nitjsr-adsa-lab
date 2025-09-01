@@ -56,7 +56,8 @@ void bubbleSort(int arr[], int n) {
     }
 }
 
-// (iii) Selection Sort
+// (iii) selection sort
+
 
 void selectionSort(int arr[], int n) {
     int i, j, min_idx;
@@ -248,7 +249,7 @@ struct Node* insertionSortList(struct Node* list_head) {
         } else {
             struct Node* temp = sorted;
             while (temp->next != NULL && temp->next->data < current->data) {
-                temp = temp->next;
+                temp = temp->next; 
             }
             current->next = temp->next;
             temp->next = current;
