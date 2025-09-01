@@ -89,11 +89,6 @@ void shellSort(int arr[], int n) {
     }
 }
 
-/**
- * (v) Quick Sort
- * A divide-and-conquer algorithm. It picks a 'pivot' element and partitions
- * the array around the pivot.
- */
 int partition(int arr[], int low, int high) {
     int pivot = arr[high];
     int i = (low - 1);
